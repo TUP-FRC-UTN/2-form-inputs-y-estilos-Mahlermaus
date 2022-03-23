@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUP - Programacion III - Clase 2 - Estilos</title>
+    <style>
+      /* <!-- Colores
+    rgb (255,255,255) // 
+    hexadecimal: #000000 //
+     */
+      * {
+        border-style: none;
+        padding: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .parrafo-negrita {
+        font-size: 16px;
+        color: black;
+        background-color: cadetblue;
+        font-weight: bold;
+      }
+      #parrafo-id {
+        border: 5px solid wheat;
+        font-size: small;
+      }
+      /* estilo con mas jerarquia */
+      p,
+      .parrafo-negrita,
+      #parrafo-id {
+        border-bottom: 2px solid saddlebrown;
+      }
+      /* todos los elementos span dentro de p */
+      p span {
+        color: crimson;
+      }
+      /* solamente al elemento que viene despues del selector */
+      p + span {
+        color: black;
+        border: 2px solid black;
+      }
+      /* elementos , clases, id´s anidados en el primer nivel de jerarquia */
+      p > span {
+        color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Estilos</h1>
+    <p style="font-family: 'Courier New', Courier, monospace">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, veniam!
+    </p>
+    <p style="font-size: 20px; color: brown">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores possimus
+      quod corrupti sapiente fuga fugit odio aperiam obcaecati ut architecto
+      neque totam laudantium quam, fugiat, ex autem dolorem magni a natus
+      aliquam eveniet, perferendis corporis commodi cupiditate? Sint maiores
+      tenetur dolores architecto deserunt, dignissimos aliquid dolore suscipit
+      quos nostrum repudiandae!
+    </p>
+    <span>p + span subsecuente</span>
+
+    <p style="background-color: burlywood">
+      <span>P > SPAN</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores possimus
+      quod corrupti sapiente fuga fugit odio aperiam obcaecati ut architecto
+      neque totam laudantium quam, fugiat, ex autem dolorem magni a natus
+      aliquam eveniet, perferendis corporis commodi cupiditate? Sint maiores
+      tenetur dolores architecto deserunt, dignissimos aliquid dolore suscipit
+      quos nostrum repudiandae!
+    </p>
+    <p class="parrafo-negrita">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores possimus
+      quod corrupti sapiente fuga fugit odio aperiam obcaecati ut architecto
+      neque totam laudantium quam, fugiat, ex autem dolorem magni a natus
+      aliquam eveniet, <span>ESTE TEXTO SOLO</span> perferendis corporis commodi
+      cupiditate? Sint maiores tenetur dolores architecto deserunt, dignissimos
+      aliquid dolore suscipit quos nostrum repudiandae!
+    </p>
+    <!-- DA PRIORIDAD A LO MAS ESPECIFICO. ID -> CLASS -> TAGS -->
+    <p class="parrafo-negrita" id="parrafo-id">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores possimus
+      quod corrupti sapiente fuga fugit odio aperiam obcaecati ut architecto
+      neque totam laudantium quam, fugiat, ex autem dolorem magni a natus
+      aliquam eveniet, perferendis corporis commodi cupiditate? Sint maiores
+      tenetur dolores architecto deserunt, dignissimos aliquid dolore suscipit
+      quos nostrum repudiandae!
+    </p>
+  </body>
+</html>

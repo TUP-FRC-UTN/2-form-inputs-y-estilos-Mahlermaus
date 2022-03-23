@@ -1,0 +1,38 @@
+/* <!-- Colores
+    rgb (255,255,255) // 
+    hexadecimal: #000000 //
+     */
+     * {
+        border-style: none;
+        padding: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .parrafo-negrita {
+        font-size: 16px;
+        color: black;
+        background-color: cadetblue;
+        font-weight: bold;
+      }
+      #parrafo-id {
+        border: 5px solid wheat;
+        font-size: small;
+      }
+      /* estilo con mas jerarquia */
+      p,
+      .parrafo-negrita,
+      #parrafo-id {
+        border-bottom: 2px solid saddlebrown;
+      }
+      /* todos los elementos span dentro de p */
+      p span {
+        color: crimson;
+      }
+      /* solamente al elemento que viene despues del selector */
+      p + span {
+        color: black;
+        border: 2px solid black;
+      }
+      /* elementos , clases, id´s anidados en el primer nivel de jerarquia */
+      p > span {
+          color: aquamarine;
+      }

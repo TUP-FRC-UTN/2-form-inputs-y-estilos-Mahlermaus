@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUP - Programacion III - Clase 2 - Estilos</title>
+  </head>
+  <body>
+    <!-- se redigiria a otra pagina que controle
+    la accion. usamos method="post" o get, etc -->
+    <img src="" alt="" />
+    <form action="/submit" method="post">
+      <!-- Cuando usamos patern podemos usar REGEX 
+        [a-z]{3} minusculas hasta 3 digitos , etc etc
+        -->
+      <hr />
+      <input
+        type="text"
+        name="numero"
+        id="numero"
+        pattern="[0-9]{3}"
+        placeholder="Leer REGEX"
+      />
+      <hr />
+      <!--  -->
+      Nombre: <br />
+      <input type="text" placeholder="Escribir Nombre" />
+      Apellido: <br />
+      <input type="text" placeholder="Ingrese apellido" />
+      Seleccione Genero : <br />
+      <!-- radiobutton / checked es booleano y preselecciona ese -->
+      <input type="radio" name="genero" id="genero" checked />1 <br />
+      <input type="radio" name="genero" id="genero" />2 <br />
+      <input type="radio" name="genero" id="genero" />3 <br />
+      <br />
+      <!-- checkbox // manda array con todos los valores seleccionados-->
+      <input type="checkbox" name="intereses" id="intereses" checked />Opcion
+      1<br />
+      <input type="checkbox" name="intereses" id="intereses" />Opcion 2<br />
+      <input type="checkbox" name="intereses" id="intereses" />Opcion 3<br />
+      <br /><br />
+      <!-- Fechas - dates -->
+      <label for="fecha">Fecha de Nacimiento</label>
+      <br />
+      <!-- min  max para delimitar rango de fechas-->
+      <input
+        type="date"
+        name="fecha-nacimiento"
+        id="fecha-nacimiento"
+        min="2022-03-23"
+        max="2022-03-25"
+      />
+      <br />
+      <!-- Lista desplegable -->
+      <select name="Provincias" id="provincia">
+        <!-- se selecciona el value que va al servidor
+            esto funciona cuando ya tenemos una tabla en la BD -->
+        <!-- usando bd, traemos todo esto desde un servicio web
+            API que  -->
+        <option value="">Seleccione una provincia</option>
+        <option value="1">Cordoba</option>
+        <option value="2">Bs. As.</option>
+        <option value="3">Rosario</option>
+        <option value="4">Chubut</option>
+      </select>
+      <br /><br />
+      <!-- Area para escribir texto col y rows definen cant. 
+    de columnas y filas  -->
+      <label for="Comentarios">Ingrese un comentario</label>
+      <br />
+      <textarea
+        style="resize: none"
+        name="comentario"
+        id="comentario"
+        cols="30"
+        rows="10"
+        placeholder="Ingrese su comentario ..."
+      >
+      </textarea>
+      <br />
+      <input type="number" name="numero" id="numero" />
+      <br />
+      <!-- Guardar informacion con submit -->
+      <button type="submit">Registrarse</button>
+      <br />
+      <!-- Limpia los campos. vuelve a default -->
+      <button type="reset">Restablecer</button>
+    </form>
+  </body>
+</html>
